@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- page header -->
+    <header>
+        <nav>
+            <div class="search-bar">
+                <div class="search-icon"><i class="fas fa-search" id="search"></i></div>
+                <div class="input-box"><input type="text" placeholder="Search for Team or League..."></div>
+            </div>
+            <div class="border-box">
+                <div class="border"></div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a class="active" href="#">dashboard</a></li>
+                    <li><a href="#">live</a></li>
+                    <li><a href="#">virtual</a></li>
+                    <li><a href="#">bets history</a></li>
+                    <li><a href="#">livescore</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="time-settings">
+            <div class="time">
+                <span>10:20:30</span>
+            </div>
+            <i class="fas fa-chevron-down" id="arrow"></i>
+            <div class="right-border"></div>
+            <div class="cog">
+                <span><i class="fas fa-cog" id="cog"></i></span>
+            </div>
+        </div>
+    </header>
+    <!-- starts main section of page -->
+    <main>
+        <div class="container">
+            <div class="container-navbar">
+                <ul class="navbar-list">
+                    <li><a href="#" id="white">all tickets</a></li>
+                    <li><a href="#">active</a></li>
+                    <li><a href="#">finished</a></li>
+                    <li class="none"><a href="#">my livescore</a></li>
+                </ul>
+
+                <div class="buttons">
+                    <span class="timeline"><p>timeline</p></span>
+                    <span class="list">list</span>
+                </div>
+            </div>
+
+            <div class="resolved-date">
+                <div class="date-select">
+                    <i class="fa fa-bars"></i>
+                    <p>Resolved Date</p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="calendar-content">
+                    <div class="my-livescore">
+                        <i class="fas fa-calendar-times"></i>
+                        <p>My Livescore</p>
+                    </div>
+                    <div class="calendar">
+                        <i class="fas fa-calendar-times"></i>
+                        <p>9 Jan 2018 - 10 Feb 2018</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- here starts section after calendar row -->
+            <section>
+                <div class="first-row hover">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons/Icons/Interface Icons/Ongoing.svg" id="circle" alt="Ongoing" >
+                            <p>active</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price">
+                            <p>poss. win</p>
+                            <p>15,551.50 <sup>Gel</sup></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds">
+                            <p>ODDS</p>
+                            <p>1.40</p>
+                        </div>
+                        <div class="price position" id="stake">
+                            <p>stake</p>
+                            <p>541.00 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out">
+                            <span id="visible-edit"><i class="fas fa-edit" id="edit"></i></span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-row hover" id="second-row">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons/Icons/Interface Icons/Ongoing.svg" id="circle" alt="Ongoing" >
+                            <p>active</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price">
+                            <p>poss. win</p>
+                            <p>20.00 <sup>Gel</sup></p>
+                        </div>
+                        <div class="price">
+                            <p>cashed out</p>
+                            <p id="green-price">20.00 <sup>Gel</sup></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds" id="formula">
+                            <p>FORMULA</p>
+                            <p>(5-2) +1</p>
+                        </div>
+                        <div class="price">
+                            <p>stake</p>
+                            <p>541.00 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out">
+                            <span id="visible-edit"><i class="fas fa-edit" id="edit"></i></span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-row hover" id="third-row">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons\Icons\Interface Icons\Lost.svg" id="circle" alt="lost">
+                            <p>lost</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price">
+                            <p>cashed out</p>
+                            <p id="green-price">10.00 <sup>Gel</sup></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds">
+                            <p>ODDS</p>
+                            <p>1.15</p>
+                        </div>
+                        <div class="price">
+                            <p>stake</p>
+                            <p>624.25 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out" id="opacity">
+                            <span id="visible-edit">
+                                <i class="fas fa-edit" id="edit"></i>
+                            </span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-row hover" id="fourth-row">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons\Icons\Interface Icons\Half Loose.svg" id="circle" alt="half-lost">
+                            <p id="half-lost">half lost</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price">
+                            <p>half lost</p>
+                            <p id="green-price">20.30 <sup>Gel</sup></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds">
+                            <p>ODDS</p>
+                            <p>3.05</p>
+                        </div>
+                        <div class="price">
+                            <p>stake</p>
+                            <p>604.00 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out" id="opacity">
+                            <span id="visible-edit">
+                                <i class="fas fa-edit" id="edit"></i>
+                            </span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-row hover" id="fifth-row">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons\Icons\Interface Icons\Half Win.svg" id="circle" alt="half-won">
+                            <p id="half-lost">half won</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price">
+                            <p>half won</p>
+                            <p id="green-price">20.30 <sup>Gel</sup></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds">
+                            <p>ODDS</p>
+                            <p>2.80</p>
+                        </div>
+                        <div class="price">
+                            <p>stake</p>
+                            <p>565.80 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out" id="opacity">
+                            <span id="visible-edit">
+                                <i class="fas fa-edit" id="edit"></i>
+                            </span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-row hover" id="sixth-row">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons\Icons\Interface Icons\Won.svg" id="circle" alt="won">
+                            <p id="voided">voided</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price">
+                            <p>won</p>
+                            <p id="green-price">1,321.63 <sup>Gel</sup></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds">
+                            <p>ODDS</p>
+                            <p>3.40</p>
+                        </div>
+                        <div class="price">
+                            <p>stake</p>
+                            <p>823.60 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out" id="opacity">
+                            <span id="visible-edit">
+                                <i class="fas fa-edit" id="edit"></i>
+                            </span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-row hover" id="seventh-row">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons\Icons\Interface Icons\Lost.svg" id="circle" alt="lost">
+                            <p>lost</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price">
+                            <p>cashed out</p>
+                            <p id="green-price">10.00 <sup>Gel</sup> <sub><img id="circle" class="bonus" src="Bet history _ list view icons\Icons\Interface Icons\Bonus.svg" alt=""></sub></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds">
+                            <p>ODDS</p>
+                            <p>1.15</p>
+                        </div>
+                        <div class="price">
+                            <p>stake</p>
+                            <p>624.25 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out" id="opacity">
+                            <span id="visible-edit">
+                                <i class="fas fa-edit" id="edit"></i>
+                            </span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-row hover" id="eight-row">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons\Icons\Interface Icons\Lost.svg" id="circle" alt="lost">
+                            <p>lost</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price" id="opacity">
+                            <p>cashed out</p>
+                            <p id="green-price">10.00 <sup>Gel</sup><sub><i id="cash-with-gift" class="fas fa-gift"></i></sub></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds">
+                            <p>ODDS</p>
+                            <p>3.05</p>
+                        </div>
+                        <div class="price">
+                            <p>stake</p>
+                            <p>604.00 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out" id="opacity">
+                            <span id="visible-edit">
+                                <i class="fas fa-edit" id="edit"></i>
+                            </span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-row hover" id="ninth-row">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons\Icons\Interface Icons\Won.svg" id="circle" alt="won">
+                            <p id="voided">won</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price">
+                            <p>half won</p>
+                            <p id="green-price">20.30 <sup>Gel</sup></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds">
+                            <p>ODDS</p>
+                            <p>2.80</p>
+                        </div>
+                        <div class="price">
+                            <p>stake</p>
+                            <p>565.80 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out" id="opacity">
+                            <span id="visible-edit">
+                                <i class="fas fa-edit" id="edit"></i>
+                            </span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-row hover" id="tenth-row">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons\Icons\Interface Icons\Won.svg" id="circle" alt="won">
+                            <p id="voided">won</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price">
+                            <p>won</p>
+                            <p id="green-price">1,321.63 <sup>Gel</sup></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds">
+                            <p>ODDS</p>
+                            <p>3.40</p>
+                        </div>
+                        <div class="price">
+                            <p id="freebet">freebet</p>
+                            <p>823.60 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out" id="opacity">
+                            <span id="visible-edit">
+                                <i class="fas fa-edit" id="edit"></i>
+                            </span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-row hover" id="eleventh-row">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons\Icons\Interface Icons\Won.svg" id="circle" alt="won">
+                            <p id="voided">won</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price">
+                            <p>won</p>
+                            <p id="green-price">20.30 <sup>Gel</sup></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds">
+                            <p>ODDS</p>
+                            <p>2.80</p>
+                        </div>
+                        <div class="price">
+                            <p>freebet</p>
+                            <p>560.40 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out" id="opacity">
+                            <span id="visible-edit">
+                                <i class="fas fa-edit" id="edit"></i>
+                            </span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-row hover" id="twelveth-row">
+                    <div class="left-side">
+                        <div class="active-status">
+                            <img src="Bet history _ list view icons\Icons\Interface Icons\Won.svg" id="circle" alt="won">
+                            <p id="voided">won</p>
+                        </div>
+                        <div class="hex-code">
+                            <p>1 DEC 12:15</p>
+                            <p class="invisible-hex-code">#425612</p>
+                        </div>
+                        <div class="price">
+                            <p>won</p>
+                            <p id="green-price">1,321.63 <sup>Gel</sup></p>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="odds">
+                            <p>ODDS</p>
+                            <p>3.40</p>
+                        </div>
+                        <div class="price">
+                            <p>stake</p>
+                            <p>823.60 <sup>Gel</sup></p>
+                        </div>
+                        <div class="cash-out" id="opacity">
+                            <span id="visible-edit">
+                                <i class="fas fa-edit" id="edit"></i>
+                            </span>
+                            <span>
+                                <p><i class="far fa-arrow-alt-circle-down" id="arrow-down"></i></p> <p id="cash-out-name">CASHOUT</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="display-more">
+                    <button class="display-more-button">display more</button>
+                </div>
+            </section>
+        </div>
+        <!-- starts sidebar -->
+        <aside>
+            <div class="sidebar">
+                <div class="aside-livescore">
+                    <p>my livescore</p>
+                </div>
+                <div class="soccer">
+                    <img src="Bet history _ list view icons\Icons\Sports\L.svg" alt="soccer-ball">
+                    <p>SOCCER</p>
+                </div>
+                <div class="soccer-results">
+                    <div class="result hover">
+                        <div class="first-team">
+                            <p>Real Madrid</p>
+                            <p><img src="Bet history _ list view icons\Icons\Teams\RealMadrid.svg" alt="real-madrid-logo"></p>
+                        </div>
+                        <div class="full-time">
+                            <p class="ft">FT</p>
+                            <p>1-1</p>
+                            <p>5 DEC 15:30</p>
+                        </div>
+                        <div class="second-team">
+                            <p><img src="Bet history _ list view icons\Icons\Teams\Manchester.svg" alt="manchester-logo"></p>
+                            <p>Man. Utd</p>
+                        </div>
+                    </div>
+                    <div class="result hover">
+                        <div class="first-team">
+                            <p>Milan</p>
+                            <p><img src="Bet history _ list view icons\Icons\Teams\Milan.svg" alt="milan-logo"></p>
+                        </div>
+                        <div class="full-time">
+                            <p class="ft">FT</p>
+                            <p>1-1</p>
+                            <p>5 DEC 15:30</p>
+                        </div>
+                        <div class="second-team">
+                            <p><img src="Bet history _ list view icons\Icons\Teams\TeamOne.svg" alt="teamOne-logo"></p>
+                            <p>Juventus</p>
+                        </div>
+                    </div>
+                    <div class="result hover">
+                        <div class="first-team">
+                            <p>Bergen</p>
+                            <p><img src="Bet history _ list view icons\Icons\Teams\TeamOne.svg" alt="teamOne-logo"></p>
+                        </div>
+                        <div class="full-time">
+                            <p class="ft">FT</p>
+                            <p>1-1</p>
+                            <p>5 DEC 15:30</p>
+                        </div>
+                        <div class="second-team">
+                            <p><img src="Bet history _ list view icons\Icons\Teams\Bayern.svg" alt="bayern-logo"></p>
+                            <p>Bayern</p>
+                        </div>
+                    </div>
+                    <div class="result hover">
+                        <div class="first-team">
+                            <p>BVB</p>
+                            <p><img src="Bet history _ list view icons\Icons\Teams\BVB.svg" alt="BVB-logo"></p>
+                        </div>
+                        <div class="full-time">
+                            <p class="ft">FT</p>
+                            <p>1-1</p>
+                            <p>5 DEC 15:30</p>
+                        </div>
+                        <div class="second-team">
+                            <p><img src="Bet history _ list view icons\Icons\Teams\Chelsea.svg" alt="chelsea-logo"></p>
+                            <p>Chelsea</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="soccer">
+                    <img src="Bet history _ list view icons\Icons\Sports\J.svg" alt="soccer-ball">
+                    <p>BASKETBALL</p>
+                </div>
+                <div class="soccer-results">
+                    <div class="result hover">
+                        <div class="first-team">
+                            <p>Real Madrid</p>
+                            <p><img src="Bet history _ list view icons\Icons\Teams\RealMadrid.svg" alt="real-madrid-logo"></p>
+                        </div>
+                        <div class="full-time">
+                            <p class="ft">FT</p>
+                            <p>1-1</p>
+                            <p>5 DEC 15:30</p>
+                        </div>
+                        <div class="second-team">
+                            <p><img src="Bet history _ list view icons\Icons\Teams\Manchester.svg" alt="manchester-logo"></p>
+                            <p>Man. Utd</p>
+                        </div>
+                    </div>
+                    <div class="result hover">
+                        <div class="first-team">
+                            <p>Milan</p>
+                            <p><img src="Bet history _ list view icons\Icons\Teams\Milan.svg" alt="milan-logo"></p>
+                        </div>
+                        <div class="full-time">
+                            <p class="ft">FT</p>
+                            <p>1-1</p>
+                            <p>5 DEC 15:30</p>
+                        </div>
+                        <div class="second-team">
+                            <p><img src="Bet history _ list view icons\Icons\Teams\TeamOne.svg" alt="teamOne-logo"></p>
+                            <p>Juventus</p>
+                        </div>
+                    </div>
+                    <div class="result hover">
+                        <div class="first-team">
+                            <p>Bergen</p>
+                            <p><img src="Bet history _ list view icons\Icons\Teams\TeamOne.svg" alt="teamOne-logo"></p>
+                        </div>
+                        <div class="full-time">
+                            <p class="ft">FT</p>
+                            <p>1-1</p>
+                            <p>5 DEC 15:30</p>
+                        </div>
+                        <div class="second-team">
+                            <p><img src="Bet history _ list view icons\Icons\Teams\Bayern.svg" alt="bayern-logo"></p>
+                            <p>Bayern</p>
+                        </div>
+                    </div>
+                    <div class="result hover">
+                        <div class="first-team">
+                            <p>BVB</p>
+                            <p><img src="Bet history _ list view icons\Icons\Teams\BVB.svg" alt="BVB-logo"></p>
+                        </div>
+                        <div class="full-time">
+                            <p class="ft">FT</p>
+                            <p>1-1</p>
+                            <p>5 DEC 15:30</p>
+                        </div>
+                        <div class="second-team">
+                            <p><img src="Bet history _ list view icons\Icons\Teams\Chelsea.svg" alt="chelsea-logo"></p>
+                            <p>Chelsea</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="display-more">
+                    <button class="display-more-button">full livescore</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
